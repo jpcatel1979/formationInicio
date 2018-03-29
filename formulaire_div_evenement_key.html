@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>formulaire local storage</title>
+    <style>
+      div{
+        position:relative;
+        display:inline-block;
+        margin-bottom:10px;
+        overflow: hidden;
+        
+        width:200px;
+        height:200px;
+        border: 1px solid black;
+      }
+     /* div[name=ecriture]{
+        float:left;
+      
+      }
+      div[name=lecture]{
+        float:right;
+      }*/
+    </style>
+    <script>
+      function ecrire(e){
+        var div2 = document.getElementById('lecture');
+        lecture.innerHTML = document.getElementById('ecriture').innerHTML.toUpperCase();
+        console.log(e);
+      }
+    </script>
+ 
+  </head>
+  <body> 
+    <p>div qui copie le texte de l'un sur l'autre en maj</p>
+    <fieldset>
+      <form name="form">
+        <p>Entrez votre texte</p>
+        <div name=ecriture id=ecriture contenteditable="true" onkeyup="ecrire(event)">
+         
+        </div>
+        <div name=lecture id=lecture>
+         
+        </div>
+        
+
+      </form>
+  </fieldset>
+
+  </body> 
+</html>

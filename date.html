@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>boucle forIn</title>
+    <style>
+      input[type=text]{
+        width: 300px;
+      }
+    </style>
+    <script>
+      var encours;
+      function commence(){
+        encours = setInterval(date,1000);
+      }
+      function stop(){
+       clearInterval(encours);
+      }
+
+    function date(){
+      var nom = new Date();
+      var jour;
+      var lesJours = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+     
+      jour = "Nous sommes le "+lesJours[nom.getDay()] +" "
+      + addZero(nom.getDate())+"/"+addZero((nom.getMonth() +1))+"/"+nom.getFullYear()+" "+
+      addZero(nom.getHours())+":"+addZero(nom.getMinutes())+":"+addZero(nom.getSeconds());
+
+     form.jour.value=jour;
+ 
+    }
+
+    function addZero(texte){
+      if(texte < 10){
+        texte = '0'+texte;
+      }
+      return texte;
+    }
+    </script>
+ 
+   
+  </head>
+  <body>
+    <script>
+    
+    </script> 
+    <form name=form>
+      <input type="button" value="start" onclick="commence();">
+      <input type="button" value="stop" onclick="stop();">
+
+      <input type="text" name="jour" readonly>
+    </form>
+  </body> 
+</html>

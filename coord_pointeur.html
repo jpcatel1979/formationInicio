@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript Paint</title>
+    <script>
+    function coord(e) {
+      console.log(e);
+      document.getElementById('coord').innerHTML = "Cordonnées du pointeur "+e.offsetX+" , "+e.offsetY; 
+    }
+    
+    </script>
+    <style>
+       img {
+        width:33%;
+      }
+    
+    </style>
+    
+ 
+  </head>
+  <body> 
+    <img src="images/foret.jpg" onmousemove="coord(event)">
+    <span id=coord> </span>
+
+
+
+  </body> 
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>formulaire local storage</title>
+    <style>
+      div{
+        margin-bottom:10px;
+      }
+      label{
+        display: inline-block;
+        margin-right:10px;
+        vertical-align: top;
+        width:50px;
+      }
+    </style>
+    <script>
+      function lire(){
+        form.donnee.value = localStorage.getItem(form.nom.value);
+      }
+
+      function enregistrer(){
+        localStorage.setItem(form.nom.value, form.donnee.value)
+      }
+
+      function effacer(){
+        localStorage.removeItem(form.nom.value);
+      }
+
+      function effacerAll(){
+        localStorage.clear();
+      }
+    </script>
+ 
+  </head>
+  <body> 
+    <p>Stockage local HTML5</p>
+    <fieldset>
+      <form name="form">
+        <p>Entrez la donnée à stocker</p>
+        <div>
+          <label>Nom</label><input type="text" name="nom">
+        </div>
+        <div>
+          <label>Donnée</label><textarea name="donnee" rows="10" cols="80" ></textarea>
+        </div>
+        <div>
+          <input type="button" value="lire" onclick="lire()">
+          <input type="button" value="Enregistrer" onclick="enregistrer();">
+          <input type="button" value="Effacer" onclick="effacer()">
+          <input type="button" value="Effacer Tout" onclick="effacerAll()">
+        </div>  
+
+      </form>
+  </fieldset>
+
+  </body> 
+</html>

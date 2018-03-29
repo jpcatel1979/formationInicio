@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript</title>
+    <script>
+      function mrSelection(){
+        var leDiv = document.getElementById('d');
+        leDiv.style.display = 'none';
+      }
+
+      function mmeSelection(){
+        var leDiv = document.getElementById('d');
+        leDiv.style.display = 'block';
+      }
+    </script>
+ 
+  </head>
+  <body> 
+
+    <form name="form">
+    
+      <input type="radio" value="Mr" name="MrMme"  onclick="mrSelection();">Mr
+      <input type="radio" value="Mme" name="MrMme" onclick="mmeSelection();" checked>Mme
+
+      <div id=d>
+        <label>Nom de jeune fille</label>
+        <input type="text" name="njf">
+        
+
+      </div>
+      
+    
+    </form>
+
+
+
+  </body> 
+</html>

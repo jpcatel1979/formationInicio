@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript</title>
+    <script>
+    function caractereAscii(){
+     var i;
+     var chaine = "";
+     document.write("Les caracteres de code 32 à 255");
+     document.write("<pre>");
+
+     for( i = 32; i <= 255;i++){
+       if((i + 1) % 16 == 0){
+        chaine += '&#'+i+";<br><br>";
+       }
+      else{
+       chaine += '&#'+i+";  ";
+       } 
+     }
+   
+    document.write(chaine);
+    document.write("</pre>");
+    }
+    
+    </script>
+ 
+   
+  </head>
+  <body onload="caractereAscii()"> 
+      Les caracteres de code 32 à 255
+  </body> 
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript</title>
+    <style>
+    div[name=maBoite]{
+      background: #FAB;
+      width: 100px;
+      height :100px;
+    }
+    div[class=dep100]{
+      transform: translate(100px);
+    }
+
+    div[class=dep500]{
+      transform:translate(500px);
+    }
+    
+    </style>
+    <script>
+      function aquerirFocus(element){
+      element.style.backgroundColor ="red";
+      }
+      function perteFocus(element){
+        element.style.backgroundColor = "white";
+      }
+
+    function dep(element){
+      if(element == 100){
+        maBoite.className = 'dep100';
+      }
+      if(element == 500){
+        maBoite.className = 'dep500';
+      }
+    }
+    </script>
+ 
+  </head>
+  <body> 
+
+    <form name="form">
+      <label>Zone 1 </label><input type="text" onfocus="aquerirFocus(this)" onblur="perteFocus(this);";>
+      <label>Zone 2 </label><input type="text" onfocus="aquerirFocus(this)" onblur="perteFocus(this);";>
+      <label>Zone 3 </label><input type="text" onfocus="aquerirFocus(this)" onblur="perteFocus(this);";>
+      <label>Zone 4 </label><input type="text" onfocus="aquerirFocus(this)" onblur="perteFocus(this);";>
+      <label>Zone 5 </label><input type="text" onfocus="aquerirFocus(this)" onblur="perteFocus(this);";>
+
+    </form>
+ <hr>
+
+    <a href="javascript:dep(100)">deplacement 100</a>
+    <a href="javascript:dep(500)">deplacement 500</a>
+
+    <div name="maBoite" id="maBoite"></div>
+
+  </body> 
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript</title>
+    <script>
+   function traitement(){
+      var leBouton = document.getElementById("valider");
+      leBouton.removeEventListener('click',traitement);
+      document.getElementById("valider").setAttribute('disabled',true);
+      alert('merci pour le clic');
+    }
+    </script>
+    <style>
+    button{
+      color:white;
+      background: black;
+    }
+    </style>
+  </head>
+  <body> 
+
+   
+      
+      <button id="valider" >Cliquez ici</button>
+     <script>
+     var leBouton = document.getElementById("valider");
+      leBouton.addEventListener('click',traitement);
+    
+  
+
+   
+     
+     
+     </script>
+      
+    
+    
+
+
+
+  </body> 
+</html>

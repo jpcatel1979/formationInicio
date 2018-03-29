@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript</title>
+    <script>
+    var first = true;
+    function changeImage(){
+      if(first){
+        image.setAttribute("src","images/tigre.jpg");
+        first = false;
+      }
+      else{
+        image.setAttribute("src","images/foret.jpg");
+
+        first=true;
+      }
+    }
+
+    </script>
+  <style>
+  img{
+    width: 660px;
+    height:441px;
+  }
+  </style>
+  </head>
+  <body> 
+    
+   <img src="images/foret.jpg" id="image" onclick="changeImage()">
+
+
+  </body> 
+</html>

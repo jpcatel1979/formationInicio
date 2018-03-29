@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javasript</title>
+   <script src="js/fichier.js"></script>
+ 
+  </head>
+  <body> 
+
+    <p>phrase fait depuis html</p>
+    <form name="form">
+      <input type="text" name="text">
+      <input type="button" onclick="carre(form.text.value)" value="calculer";>
+      <input type="text" name="resultat" readonly>
+
+    </form>
+
+
+    <form name="form2">
+      <label>Nom</label><input type="text" onblur="maj(form2.nom.value)" name="nom">
+      <input type="button" onclick="maj(form2.nom.value)" value="Masjuscule";>
+
+    </form>
+  </body> 
+</html>
